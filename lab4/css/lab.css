@@ -4,6 +4,18 @@
 .minor-section {
     padding: 10px;
     margin-bottom: 10px;
-    border: solid 1px #888;
-    background-color: #DDD8C4;
+    border: solid 1px #482e8c;
+    background-color: #f9d4ee;
   }
+
+#Guacamole {
+  width: 500px;
+}
+
+#connect4 {
+  width: 500px;
+}
+
+body {
+  background-color: #e7c7f0;
+}
