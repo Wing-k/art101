@@ -10,10 +10,12 @@
 
 #Guacamole {
   width: 500px;
+  text-align: center;  
 }
 
 #connect4 {
   width: 500px;
+  text-align: center;
 }
 
 body {
