@@ -5,7 +5,7 @@
 
 /* photo box*/
 
-.side-by-side {
+/* .side-by-side {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -18,4 +18,4 @@
 
 .photo-box img {
   width: 100%;
-}
+} */
