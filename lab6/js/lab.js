@@ -1,4 +1,4 @@
-/* index.js - Lab 5 Javascript
+/* index.js - Lab 6 Javascript
  * Author: Ashley Hom and Cho Wing Koon
  * Created: 27 October
  * License: Public Domain
