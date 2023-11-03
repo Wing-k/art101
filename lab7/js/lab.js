@@ -4,19 +4,26 @@
  * License: Public Domain
 */
 
-// Create a new function
+// Create a new function that reference and compare Strings
+// Refered to the codes in this link: https://www.tutorialspoint.com/case-sensitive-sort-in-javascript
 
+function compare(a,b){
+    return a.localeCompare(b);
+}
+
+// Create a new function to sort name
 function sortName(){
     // get user input for name
     var userName = window.prompt("What is your name?");
     // change user name to lower case
-    var lowerName = userName.toLowerCase();
-    console.log("lowerName = ", lowerName);
+    // var lowerName = userName.toLowerCase();
+    // console.log("lowerName = ", lowerName);
     // split the string to array
-    var splitName = lowerName.split("");
+    var splitName = userName.split("");
     console.log("splitName = ", splitName);
-    // sort letters in the array
-    var sortedName = splitName.sort();
+    // sort letters in the array and compare letters
+    var compareName = splitName.sort(compare);
+    var sortedName = compareName.sort();
     console.log("sortedName = ", sortedName);
     // join array back to string
     var newName = sortedName.join("");
