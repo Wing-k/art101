@@ -45,3 +45,10 @@ ul {
     text-align: left;
 }
 /* burrowed code from https://stackoverflow.com/questions/5347833/centering-bullets-on-a-centered-list to figure out how to make centered list with left-aligned text */
+
+.special {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: solid 1px #888;
+    background-color: #f4defa;
+}
