@@ -58,7 +58,7 @@ ul {
 /* referred to https://www.w3schools.com/cssref/sel_nth-child.php for alternating alignment of text*/
 /* referred to https://www.w3schools.com/css/css3_borders.asp for rounded corners*/
 
-.text:nth-child(even) { 
+/*.text:nth-child(even) { 
     text-align: right;
     clear:right; 
     padding: 10px;
@@ -78,7 +78,22 @@ ul {
     margin: 10px;
 }
 
+
+
+*/
+
+#output {
+    text-align: center;
+    clear:center; 
+    padding: 10px;
+    border: solid 2px #888;
+    border-radius: 20px;
+    background-color: #f8edfc;
+    margin: 10px;
+}
+
 .section {
+    text-align: center;
     padding: 10px;
     margin-bottom: 10px;
     border: solid 5px #9cb19d;
