@@ -4,6 +4,8 @@
  * License: Public Domain
 */
 
+var bonusButton = $(".special-section").append("<button id='special-sections button'>Press for changes</button>");
+
 // create a button for challenge
 var challengeButton = $(".challenge").append("<button id='challenge-button'>Press for challenge</button>");
 
@@ -34,5 +36,8 @@ $("#results-button").click(function(){
     console.log("These are the results for lab 9.");
 })
 
+// bonus
 
-
+$(".special-sections button").click(function(){
+    $(this).parent().toggleClass("special");
+})
