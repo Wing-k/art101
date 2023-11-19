@@ -27,7 +27,7 @@ $("#submit").click(function(){
 function anagram(inputName) {
     // convert the name string to an array
     const letters = inputName.split('');
-    // use algorithm to mix letters
+    // use the Fisher-Yates (Knuth) shuffle algorithm to mix letters
     for (let i = letters.length - 1; i > 0; i--) {
         const length = Math.floor(Math.random() * (i + 1));
         [letters[i], letters[length]] = [letters[length], letters[i]];
