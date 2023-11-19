@@ -21,3 +21,26 @@ $("#submit").click(function(){
     $("#output").html('<div class="text"><p>' + nameSorted + '</p></div>');
 });
 
+// bonus
+// codes referanced from lecture 11/17
+
+function generateAnagram(inputName) {
+    // convert the name string to an array
+    const letters = inputName.split('');
+    // use algorithm to mix letters
+    for (let i = letters.length - 1; i > 0; i--) {
+        const length = Math.floor(Math.random() * (i + 1));
+        [letters[i], letters[length]] = [letters[length], letters[i]];
+    }
+    // join letters back into one string
+    return letters.join('');
+}
+
+$("#anagram").click(function(){
+    // get value of input field
+    const input = $("#user-name").val();
+    // get an anagram of the input
+    anagram = generateAnagram(input);
+    // append a new div to our output div
+    $('#output').html('<div class="text"><p>' + anagram + '</p></div>');
+});
