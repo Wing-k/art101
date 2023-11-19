@@ -24,7 +24,7 @@ $("#submit").click(function(){
 // bonus
 // codes referenced from lecture 11/17
 
-function generateAnagram(inputName) {
+function anagram(inputName) {
     // convert the name string to an array
     const letters = inputName.split('');
     // use algorithm to mix letters
@@ -40,7 +40,7 @@ $("#anagram").click(function(){
     // get value of input field
     const input = $("#user-name").val();
     // get an anagram of the input
-    anagram = generateAnagram(input);
+    anagram = anagram(input);
     // append a new div to our output div
     $('#output').html('<div class="text"><p>' + anagram + '</p></div>');
 });
