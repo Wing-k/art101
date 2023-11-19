@@ -22,7 +22,7 @@ $("#submit").click(function(){
 });
 
 // bonus
-// codes referanced from lecture 11/17
+// codes referenced from lecture 11/17
 
 function generateAnagram(inputName) {
     // convert the name string to an array
