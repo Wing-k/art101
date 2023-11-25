@@ -5,11 +5,11 @@
    Date created: 24 November 2023
 */
 
-function FizzBuzz() {
+function FizzBuzz(Max) {
     //create empty string
     longString = "";
 
-    for (var index=1; index <=200; index++){
+    for (var index=1; index <=Max; index++){
         str = "";
 
         //if number is a multiple of 3
@@ -27,6 +27,12 @@ function FizzBuzz() {
             str += "Boom"
         }
 
+        //if number is a multiple of 4
+        if(index%9 == 0) {
+            str += "Bang"
+        }
+
+        //logic referred to lecture
         if (str != "") { 
             //add exclamation point if string has a word
             str += "!"; 
@@ -38,4 +44,9 @@ function FizzBuzz() {
     $("#output").html(longString);
 }
 
-FizzBuzz()
+$("#run").click(function(){
+    // get value of input field
+    const input = $("#max").val();
+    //run the FizzBuzz() function
+    FizzBuzz(input);
+});
