@@ -49,10 +49,9 @@ ul {
 .special {
     padding: 10px;
     margin-bottom: 10px;
-    border: solid 5px #9cb19d;
+    border: solid 2px #3e007c;
     background-color: #f4defa;
     font-weight: bold;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* referred to https://www.w3schools.com/cssref/sel_nth-child.php for alternating alignment of text*/
@@ -84,7 +83,7 @@ ul {
 
 #output {
     text-align: center;
-    clear:center; 
+    clear: center; 
     padding: 10px;
     border: solid 2px #888;
     border-radius: 20px;
@@ -100,3 +99,7 @@ ul {
     background-color: #f4defa;
 }
 
+.column{
+    column-count: 3;
+    column-gap: 40px;
+}

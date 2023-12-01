@@ -62,3 +62,24 @@ for (var index=1; index <=120; index++){
       console.log(index);
     }
   }
+
+
+const ENDPOINT = "https://icanhazdadjoke.com/";
+
+//attach event listener
+$("#go").click(function(){
+	//ajax
+  $.ajax({
+  	"url": ENDPOINT,
+    "success": function(results){
+  //in the callback:
+  //extract the rewsult
+      jokeText = results.jokel
+  //add to output div
+      $("output").append("<p>" + jokeText);
+    },
+    "error": function(){
+    
+    }
+  })
+})

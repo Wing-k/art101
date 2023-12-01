@@ -1,8 +1,25 @@
-
 .special {
     padding: 10px;
     margin-bottom: 10px;
     border: solid 2px #3e007c;
     background-color: #f4defa;
     font-weight: bold;
+}
+
+/* code referenced to the second answer from https://stackoverflow.com/questions/3622756/button-center-css */
+#challenge-button {
+    /* make element into a block */
+    display: block;
+    /* make sure left and right margin equally */
+    margin: 0 auto;
+}
+
+#problems-button {
+    display: block;
+    margin: 0 auto;
+}
+
+#results-button {
+    display: block;
+    margin: 0 auto;
 }
