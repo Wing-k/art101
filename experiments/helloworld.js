@@ -67,19 +67,27 @@ for (var index=1; index <=120; index++){
 const ENDPOINT = "https://icanhazdadjoke.com/";
 
 //attach event listener
-$("#go").click(function(){
-	//ajax
-  $.ajax({
-  	"url": ENDPOINT,
-    "success": function(results){
-  //in the callback:
-  //extract the rewsult
-      jokeText = results.jokel
-  //add to output div
-      $("output").append("<p>" + jokeText);
-    },
-    "error": function(){
-    
-    }
-  })
-})
+// $("#go").click(function(){
+// 	//ajax
+//   $.ajax({
+//   	"url": ENDPOINT,
+//     "datatype": "json";
+//     "success": function(results){
+//   //in the callback:
+//   //extract the rewsult
+//       jokeText = results.joke
+//   //add to output div
+//       $("output").append("<p>" + jokeText);
+//     },
+//     "error": function(data){
+//     }
+//     .done(function(data){
+//       console.log(data);
+//       jokeText = data.joke;
+//       $("output").append("<p>" + jokeText);
+//     }
+//   })
+// })
+
+//data[0]
+//data[0].question
