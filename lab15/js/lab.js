@@ -24,3 +24,25 @@ $("#activate").click(function(){
     })
 })
 
+const ENDPOINTnasa = "https://api.nasa.gov/planetary/apod?api_key=hhGjgLEUNLWRsgOMKNjab4Uk8LTv55Ij6Dbufar9";
+
+// attach an event listener
+$("#nasa").click(function(){
+    $.ajax({
+        "url": ENDPOINTnasa,
+        "type": "GET",
+        "dataType": "json",
+        success: function(data) {
+            console.log(data.title);
+            title = data.title;
+            img = data.hdurl;
+            description = data.explanation;
+            $("#bonus").append("<p>" + title + "</p>");
+            $("#bonus").append("<img src='" + img + "'/>");
+            $("#bonus").append("<p>" + description + "</p>");
+        },
+        error: function(data) {
+            console.log("Error");
+        }
+    })
+})
