@@ -14,8 +14,8 @@ $("#activate").click(function(){
         "type": "GET",
         "dataType": "json",
         success: function(data) {
-            console.log(data.answer)
-            text = data.answer
+            console.log(data.answer);
+            text = data.answer;
             $("#output").append("<p>" + text);
         },
         error: function(data) {
@@ -23,3 +23,4 @@ $("#activate").click(function(){
         }
     })
 })
+
