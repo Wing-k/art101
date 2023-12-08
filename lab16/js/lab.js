@@ -5,7 +5,8 @@
    Date created: 6 December 2023
 */
 
-const ENDPOINT = "https://xkcd.com/info.0.json";
+// lab 16 non-bonus
+const ENDPOINT = "https://xkcd.com/614/info.0.json";
 
 // Using the core $.ajax() method 
 
@@ -21,21 +22,63 @@ $("#comic").click(function(){
         //   all the action goes in here
         success: function(comicObj) {
             // do stuff
-            console.log("working");
-            const title = comicObj.title;
-            const img = comicObj.img;
-            const alt = comicObj.alt;
+            console.log(comicObj);
+            title = comicObj.title;
+            img = comicObj.img;
+            alt = comicObj.alt;
             $("#output").append("<p>" + title + "</p>");
             $("#output").append("<img src='" + img + "'/>");
             $("#output").append("<p>" + alt + "</p>");
         },
         // What we do if the api call fails
-        error: function(request, error) { 
+        error: function (jqXHR, textStatus, errorThrown) { 
             // do stuff
-            console.log("Error:", request, error);
+            console.log("Error:", textStatus, errorThrown);
         }
     })
 })
 
 
+//bonus with debugging help from chatGPT
+  
+bonusEndpoint = "https://xkcd.com/10/info.0.json";
 
+comicNumber = 10;
+
+function getAndPutData(){ 
+    $("#output").empty();
+    $.ajax({
+        url: bonusEndpoint,
+        type: "GET",
+        dataType: "json",
+        success: function(comicObj) {
+            console.log(comicObj);
+            const title = comicObj.title;
+            const img = comicObj.img;
+            const alt = comicObj.alt;
+            $("#output").append("<p>" + title + "</p>");
+            $("#output").append("<img src='" + img + "'/>");
+            $("#output").append("<p>" + alt + "</p>");
+        },
+        // What we do if the api call fails
+        error: function(jqXHR, textStatus, errorThrown) { 
+        // do stuff
+            console.log("Error:", textStatus, errorThrown);
+        }
+    })
+}
+
+$("#previous").click(function(){
+    if (comicNumber > 1) {
+        comicNumber -= 1;
+        bonusEndpoint = `https://xkcd.com/${comicNumber}/info.0.json`;
+        getAndPutData(bonusEndpoint);
+    }
+})
+
+$("#next").click(function(){
+    comicNumber += 1;
+    bonusEndpoint = `https://xkcd.com/${comicNumber}/info.0.json`;
+    getAndPutData(bonusEndpoint);
+
+})

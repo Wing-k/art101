@@ -3,3 +3,12 @@
     margin: 0 auto;
     margin-top: 20px;
 } 
+
+#previous {
+    display: inline-block;
+    margin-right: 10px; /* Adjust spacing between buttons */
+  }
+  
+#previous + #next {
+    display: inline-block;
+  }
